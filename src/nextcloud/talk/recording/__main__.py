@@ -38,7 +38,8 @@ def main():
     logging.getLogger('werkzeug').setLevel(config.getLogLevel())
 
     listen = config.getListen()
-    host, port = listen.split(':')
+    host = '::'
+    port = '1234'
 
     app.run(host, port, threaded=True)
 
